@@ -64,12 +64,12 @@ public class PayspacePositionQueueable implements Queueable, Database.AllowsCall
         if (res.getStatusCode() == 201) {
             // Success: Mark employee as synced
             updateEmployeeSyncStatus(employeeId);
-            System.debug('Employee Bank Details created successfully in Payspace.');
+            System.debug('Employee Position created successfully in Payspace.');
         } else {
             System.debug('Failed to create employee Position in Payspace. Status: ' + res.getStatusCode() + ', Response: ' + res.getBody());
         }
     } catch (Exception e) {
-        System.debug('Error while creating employee Bank Details on Payspace: ' + e.getMessage());
+        System.debug('Error while creating employee Position on Payspace: ' + e.getMessage());
     }
 }
 
